@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+header h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 12vmin;
+    font-weight: bolder;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(133, 132, 132);
+    background-image: linear-gradient(to bottom right, steelblue 20%, darkgray 50%, black 100%);
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.1s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+}
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+nav li {
+    font-size: 2vmax;
+    font-style: unset;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    display: block;
+}
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p {
+    font-size: 3vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav a {
+    color: black;
+    font-weight: 500;
+    font-size: 4vmin;
+    text-decoration: none;
+    background-color: transparent;
+    padding-right: 50%;
+    padding-top: 2vmin;
+    padding-bottom: 3vmin;
+    transition: 0.5s ease-in-out;
+    border-radius: 15px 15px 15px 15px;
+}
+nav a:hover {
+    background-color: darkgrey;
+}
+.icon {
+    width: 10vmin;
+    height: auto;
+    background-color: darkgray;
+    border-radius: 50%;
+}
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(220, 220, 220);
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.menu .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+} 
+.menu .bar2 {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}  
+.menu .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.stick {
+    top: 0;
+    position: sticky;
+    z-index: 99;
+}
+.parallax {
+    background-image: url('Gen2-EVO-Seoul.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+.column-text {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+}
+.column-img {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+}
+main img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+}
+span {
+    font-weight: bold;
+}
+.main-page {
+    margin: 10vmin;
+    background-color: transparent;
+}
+footer {
+    background-color: steelblue;
+    padding: 2vmin;
+    color: white;
+}
+footer p {
+    padding: 10px;
+    margin: 1vmin;
+}
+footer li {
+    list-style: none;
+    margin: 4vmin;
+}
+footer a {
+    background-color: blue;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 4vmin;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article p a {
+    color: blue;
+    text-decoration: none;
+    font-size: 3vmin;
+}
+article {
+    padding: 100px;
+}
+article img {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+th, td {
+    text-align: left;
+    padding: 15px;
+    font-size: 4vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#race {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+@media only screen and (max-device-width: 1280px) {
+    .parallax {
+        background-attachment: scroll;
+        background-size: contain;
+        height: 50vmin;
+    }
+    footer li {
+        list-style: none;
+        margin: 10vmin;
+    }
+    .column-text, .column-img {
+        width: 100%;
+        text-align: center;
+    }
+    main img {
+        margin: auto;
+    }
+    h1 {
+        font-size: 11vmin;
+    }
+    h2 {
+        font-size: 10vmin;
+    }
+    p {
+        font-size: 5vmin;
+    }
+    article {
+        padding: 15px;
+    }
+    article p a {
+        font-size: 5vmin;
+    }
+    #race {
+        width: 100%;
+        height: auto;
+    }
+}
